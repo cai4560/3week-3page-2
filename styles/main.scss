@@ -1,0 +1,87 @@
+$turquoise: #39aa97;
+$lightGrey: #e9e9e9;
+$headIconSize: 30px;
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans";
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.iconfont {
+  vertical-align: middle;
+}
+
+.main {
+  display: flex;;
+  margin: 0 15%;
+
+  header {
+    flex: 1;
+
+    .logo {
+      width: 80%
+    }
+
+    .nav-link {
+      margin: 30px 0;
+
+      li {
+        margin: 15px 0;
+
+        .iconfont {
+          font-size: $headIconSize;
+          margin-right: 10px;
+        }
+
+        .icon-desc {
+          color: $turquoise;
+          font-weight: bolder;
+          line-height: $headIconSize;
+        }
+      }
+    }
+
+    .join-us {
+      margin-top: 40px;
+
+      li {
+        margin: 50px 0;
+
+        .join-us-title {
+          border-bottom: 2px dashed $lightGrey;
+          padding: 5px 0;
+        }
+
+        .join-us-desc {
+          font-size: 14px;
+        }
+
+        .join-us-content {
+          margin: 15px 0;
+          border: 2px solid $lightGrey;
+          border-radius: 5px;
+          padding: 5px 5px;
+          color: $turquoise;
+
+          .iconfont {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .container {
+    flex: 4;
+  }
+}
