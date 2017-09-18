@@ -12,10 +12,10 @@ h1 {
   font-size: 35px; }
 
 h2 {
-  font-size: 25px; }
+  font-size: 20px; }
 
 h3 {
-  font-size: 20px; }
+  font-size: 18px; }
 
 a {
   cursor: pointer; }
@@ -25,6 +25,10 @@ li {
 
 span {
   text-align: center; }
+
+.desc {
+  font-weight: 500;
+  font-style: italic; }
 
 .iconfont {
   font-size: 30px;
@@ -36,7 +40,8 @@ span {
     flex: 1;
     margin-right: 50px; }
     .main header .logo {
-      width: 80%; }
+      width: 120px;
+      height: 120px; }
     .main header .nav-link {
       margin: 30px 0; }
       .main header .nav-link li {
@@ -45,7 +50,6 @@ span {
           margin-right: 10px; }
         .main header .nav-link li .icon-desc {
           color: #39aa97;
-          font-weight: bolder;
           line-height: 30px; }
     .main header .join-us {
       margin-top: 40px; }
@@ -65,9 +69,10 @@ span {
           .main header .join-us li .join-us-content .iconfont {
             font-size: 20px; }
   .main .container {
-    flex: 4; }
+    flex: 5; }
     .main .container .container-top {
-      background: url("../resources/foodsense.jpg") round;
+      background-image: url("../resources/foodsense.jpg");
+      background-size: cover;
       height: 500px; }
       .main .container .container-top h1 {
         display: inline-block;
@@ -77,13 +82,14 @@ span {
       .main .container .container-top h2 {
         display: inline-block;
         background-color: black;
+        margin-right: 200px;
         color: white;
         padding: 0 30px; }
       .main .container .container-top .photo-by {
+        position: relative;
         display: inline-block;
+        bottom: -15%;
         float: right;
-        margin: 60px 20px 0 0;
-        padding: 5px 10px;
         background-color: #e9e9e9; }
     .main .container .container-nav {
       display: flex; }
@@ -100,32 +106,33 @@ span {
       .main .container .container-nav li:last-child {
         border-right: none; }
     .main .container .container-email {
-      margin: 30px 0;
+      display: flex;
+      margin: 50px 0;
       border: 2px dashed #e9e9e9;
       border-left: 0;
       border-right: 0;
-      padding: 5px 0; }
+      padding: 5px 0;
+      align-items: center; }
       .main .container .container-email .iconfont {
-        margin: 0 10px;
+        margin: 0 20px;
         height: auto; }
       .main .container .container-email .container-email-desc {
-        display: inline-block;
-        width: 50%;
-        text-align: left;
-        font-size: 14px; }
+        font-size: 14px;
+        width: 45%; }
       .main .container .container-email input {
-        height: 30px;
+        height: 20px;
         width: 30%; }
       .main .container .container-email button {
-        height: 30px;
-        margin-left: 10px; }
+        height: 20px;
+        margin-left: 20px; }
     .main .container .container-article ul {
-      display: flex; }
+      display: flex;
+      margin-bottom: 20px; }
       .main .container .container-article ul li {
         flex: 1;
         margin-right: 20px; }
         .main .container .container-article ul li img {
-          width: 215px;
+          width: 80%;
           border: 2px solid #e9e9e9;
           padding: 10px; }
         .main .container .container-article ul li h3 {
@@ -159,5 +166,81 @@ footer {
     margin-top: 20px;
     float: right;
     color: #b4b4b4; }
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+  .main {
+    flex-direction: column; }
+    .main header {
+      display: flex;
+      margin-right: 0;
+      flex-direction: row; }
+      .main header .logo {
+        flex: 1;
+        width: 10%;
+        height: 10%;
+        margin-bottom: 3%; }
+      .main header .nav-link {
+        display: flex;
+        flex: 4;
+        flex-direction: row;
+        margin-left: 20%; }
+        .main header .nav-link li {
+          margin: 0 5%;
+          font-size: 12px; }
+          .main header .nav-link li .iconfont {
+            display: block;
+            text-align: center;
+            font-size: 14px; }
+          .main header .nav-link li .icon-desc {
+            white-space: nowrap; }
+      .main header .join-us {
+        display: none; }
+    .main .container-nav-desc {
+      display: none; } }
+@media screen and (max-width: 600px) {
+  .main {
+    flex-direction: column; }
+    .main header {
+      display: flex;
+      flex-direction: column;
+      margin-right: 0;
+      align-items: center; }
+      .main header .logo {
+        order: 2;
+        margin-bottom: 5%; }
+      .main header .nav-link {
+        order: 1;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px dashed #e9e9e9;
+        padding-bottom: 5%; }
+        .main header .nav-link li {
+          flex: 1;
+          margin: 0 3%;
+          text-align: center; }
+          .main header .nav-link li .iconfont {
+            display: none; }
+          .main header .nav-link li .icon-desc {
+            white-space: nowrap; }
+      .main header .join-us {
+        display: none; }
+    .main .container .container-top {
+      margin-bottom: 120px; }
+      .main .container .container-top h1 {
+        font-size: 20px;
+        margin-top: 500px;
+        width: -webkit-fill-available; }
+      .main .container .container-top h2 {
+        font-size: 15px;
+        margin-right: 0;
+        width: -webkit-fill-available; }
+      .main .container .container-top .photo-by {
+        bottom: -5%;
+        background-color: transparent; }
+    .main .container .container-nav {
+      display: none; }
+    .main .container .container-article ul {
+      flex-direction: column; } }
 
 /*# sourceMappingURL=main.css.map */
